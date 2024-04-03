@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+  font-family: "Baloo Bhai 2", cursive; /* Baloo Bhai 2 font for the entire webpage */
+  background-color: #f0f0f0;
+  line-height: 1.6;
+  color: #fff;
+  position: relative;
+}
+
+/* Background image */
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("cdbg.jpg"); /* Replace 'your-background-image.jpg' with the path to your background image */
+  background-size: cover;
+  z-index: -1; /* Set z-index to layer behind other content */
+  filter: blur(8px);
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main section starts here */
+
+main {
+  padding: 2rem;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Portfolio section */
+
+/* Portfolio Section Styles */
+#portfolio .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.project-category {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Contact section */
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px; /* Add margin between heading and cards */
+}
+
+.card {
+  width: calc(25% - 20px); /* Adjust width based on the number of cards */
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto 15px; /* Center logo and add margin */
+  width: 50px; /* Set logo size */
+  height: 50px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 15px;
+  color: black;
+}
+
+.card a {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.card a:hover {
+  background-color: #555;
+}
+
+/* Revert font size changes for the home section */
+#home h1 {
+  font-size: 2.5rem; /* Revert font size */
+}
+
+#home p {
+  font-size: 1.1rem; /* Revert font size */
+}
+
+/* Increase distance between heading and content */
+.content h2,
+.content h3 {
+  margin-bottom: 50px;
+}
+
+/* Increase font-size of paragraph in about id */
+#about p {
+  font-size: 1.2rem;
+}
